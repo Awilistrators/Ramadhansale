@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Formulir Pendaftaran Ramadhan Sale Suryatokoku</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+  * { box-sizing: border-box; }
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ff9acb, #ffc1dd);
+  padding: 20px;
+}
+
+.box {
+  max-width: 650px;
+  background: #ffffff;
+  margin: auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,.18);
+}
+
+.header {
+  text-align: center;
+  padding: 6px 10px;
+  background: #ffe3f0;
+}
+
+.header .banner {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  display: inline-block;
+}
+
+.content { padding: 22px; }
+
+h2 {
+  text-align: center;
+  color: #e91e63;
+  margin-bottom: 22px;
+  font-size: 18px;
+}
+
+
+label {
+  font-weight: bold;
+  margin-top: 14px;
+  display: block;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 11px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+textarea { resize: vertical; }
+
+.desc {
+  font-size: 13px;
+  background: #fff0f7;
+  padding: 14px;
+  border-radius: 8px;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+button {
+  width: 100%;
+  background: #e91e63;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  margin-top: 26px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover { background: #d81b60; }
+
+.hidden { display: none; }
+
+.loading {
+  position: fixed;
+  inset: 0;
+  background: rgba(255,255,255,.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #e91e63;
+  z-index: 999;
+}
+
+ .suryaflu-img {
+  text-align: center;
+  margin: 14px 0;
+}
+
+.suryaflu-img img {
+  max-width: 220px;
+  width: 100%;
+  height: auto;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<div class="loading" id="loading">⏳ Mengirim data...</div>
+
+<div class="box">
+  <div class="header">
+    <img src="header-event.png" class="banner">
+  </div>
+
+  <div class="content">
+    <p class="event-desc">
+  <b>Carnival Big Sale Suryatokoku Vol.1</b> hadir dengan segudang
+  <b>Promo Spesial</b>, <b>Diskon Besar</b>, <b>Free Produk di jam tertentu</b>,
+  <b>Games Berhadiah</b>, dan berbagai <b>Activity Seru</b> yang sayang untuk dilewatkan!
+</p>
+
+<h2>FORMULIR PENDAFTARAN</h2>
+
+    <form id="regForm">
+
+      <label>Nama Lengkap</label>
+      <input type="text" name="nama" required>
+
+      <label>Jenis Kelamin</label>
+      <select name="jk" required>
+        <option value="">-- Pilih --</option>
+        <option>Laki-laki</option>
+        <option>Perempuan</option>
+      </select>
+
+      <label>Tanggal Lahir</label>
+      <input type="date" name="tgl_lahir" required>
+
+      <label>Nomor WhatsApp</label>
+      <input type="tel" name="wa" required>
+
+      <label>Email</label>
+      <input type="email" name="email" required>
+
+      <label>Alamat Lengkap</label>
+      <textarea name="alamat" required></textarea>
+
+      <label>Apakah kamu ingin bergabung ke komunitas @Suryafluencers?</label>
+
+     <div class="suryaflu-img">
+  <img src="suryafluencers.png" alt="Suryafluencers">
+</div>
+
+      <div class="desc">
+  <b>@suryafluencers</b> adalah community micro influencer yang tumbuh bersama
+  <b>Suryatokoku</b>. Bukan sekadar reviewer, tapi partner dan keluarga Suryatokoku.
+  <br><br>
+
+  <b>Syarat:</b>
+  <ol>
+    <li>Wajib follow Instagram <b>@suryatokoku.id</b>, <b>@suryafluencers</b> dan TikTok <b>@suryatokoku.id</b></li>
+    <li>Tergabung dalam member ecer Suryatokoku</li>
+    <li>Domisili Cirebon, Ciledug, dan wilayah sekitarnya</li>
+    <li>Followers minimal <b>1000+</b> dan akun bersifat publik</li>
+    <li>Aktif membuat konten di media sosial</li>
+    <li>Ikut serta dalam event & campaign yang diadakan oleh Suryatokoku</li>
+  </ol>
+
+  <b>Sebagai bagian dari komunitas ini, Sunshine berkesempatan untuk:</b>
+  <ol>
+    <li>Mendapatkan early information terkait event atau campaign Suryatokoku</li>
+    <li>Mendapatkan poin setiap kali belanja</li>
+    <li>Mendapatkan poin setiap mengikuti kegiatan</li>
+    <li>Special goodie bag untuk member aktif di setiap periode</li>
+  </ol>
+</div>
+
+
+      <select name="suryaflu" id="suryaflu" required>
+        <option value="">-- Pilih --</option>
+        <option value="Ya">Ya, Mau Bergabung</option>
+        <option value="Tidak">Tidak</option>
+      </select>
+
+      <div id="creatorForm" class="hidden">
+        <label>Username Instagram</label>
+        <input type="text" name="ig" id="ig">
+
+        <label>Username TikTok</label>
+        <input type="text" name="tt" id="tt">
+      </div>
+
+      <button type="submit">DAFTAR</button>
+    </form>
+  </div>
+</div>
+
+<script>
+const form = document.getElementById("regForm");
+const loading = document.getElementById("loading");
+
+const WEBAPP_URL = "https://script.google.com/macros/s/AKfycbzmU7vLuNrPvolmltomtvMleICptWulJg_qhCamorTY-wgYrmtUjowMaY95WTpdQ2Fejw/exec";
+const SUCCESS_URL = "https://awilistrators.github.io/FormCBSSuryatokoku/success.html";
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+  loading.style.display = "flex";
+
+  fetch(WEBAPP_URL, {
+    method: "POST",
+    body: new FormData(form)
+  })
+  .then(r => r.text())
+  .then(t => {
+    if (t.trim() === "OK") {
+      const nama = form.nama.value;
+      const wa = form.wa.value;
+
+      window.location.href =
+        SUCCESS_URL +
+        "?nama=" + encodeURIComponent(nama) +
+        "&wa=" + encodeURIComponent(wa);
+    } else {
+      throw t;
+    }
+  })
+  .catch(err => {
+    alert("Gagal mengirim data");
+    loading.style.display = "none";
+    console.error(err);
+  });
+});
+
+
+const suryaflu = document.getElementById("suryaflu");
+const creatorForm = document.getElementById("creatorForm");
+
+suryaflu.addEventListener("change", () => {
+  creatorForm.classList.toggle("hidden", suryaflu.value !== "Ya");
+});
+</script>
+
+</body>
+</html>
