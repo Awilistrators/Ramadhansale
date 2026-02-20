@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Pendaftaran Berhasil</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ff9acb, #ffc1dd);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+.box {
+  background: #fff;
+  padding: 32px 26px;
+  border-radius: 16px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0,0,0,.2);
+}
+h2 {
+  color: #e91e63;
+  margin-top: 5;
+  margin-bottom: 8px;
+}
+
+.desc {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+.qr {
+  margin: 22px auto;
+}
+.note {
+  font-size: 13px;
+  margin-top: 18px;
+}
+.ig {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+  .ig {
+  margin-top: 6px;
+}
+
+.ig a {
+  color: #e91e63;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.ig a:hover {
+  text-decoration: underline;
+}
+
+.desc a {
+  color: #e91e63;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.desc a:hover {
+  text-decoration: underline;
+}
+
+.follow-line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  margin-top: 6px;
+  text-align: left;
+}
+
+.follow-line a {
+  color: #e91e63;
+  text-decoration: none;
+}
+
+.follow-line a:hover {
+  text-decoration: underline;
+}
+
+.follow-line .ig {
+  color: #E1306C;
+}
+
+.follow-line .tt {
+  color: #000;
+}
+
+.follow-line .maps {
+  color: #34A853;
+}
+
+.follow-note {
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: left;
+  line-height: 1.6;
+}
+
+  .desc.left {
+  text-align: left;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="box">
+  <h2>Pendaftaran Berhasil 🎉</h2>
+
+  <div class="desc left">
+  Terima kasih telah melakukan pendaftaran, silakan <b>screenshot QR Code</b> di bawah dan tunjukkan kepada
+  <b>staff kami</b> untuk mendapatkan
+  <b>Freebies Skincare (Produk Skincare Gratis)</b>.
+  <br><br>
+
+  🎁 Freebies hanya berlaku untuk <b>100 pelanggan pertama yang berkunjung ke toko kami setiap hari selama 29–31 Desember 2025.</b><br>
+  </div>
+
+  <hr style="margin:16px 0">
+
+  <b>Syarat mendapatkan Gratis Produk Skincare:</b><br>
+
+<div class="follow-line">
+  <i class="fab fa-instagram ig"></i>
+  Follow Instagram →
+  <a href="https://www.instagram.com/suryatokoku.id" target="_blank">
+    <b>@suryatokoku.id</b>
+  </a>
+</div>
+
+<div class="follow-line">
+  <i class="fab fa-instagram ig"></i>
+  Follow Instagram →
+  <a href="https://www.instagram.com/suryafluencers" target="_blank">
+    <b>@suryafluencers</b>
+  </a>
+</div>
+
+<div class="follow-line">
+  <i class="fab fa-tiktok tt"></i>
+  Follow TikTok →
+  <a href="https://www.tiktok.com/@suryatokoku.id" target="_blank">
+    <b>@suryatokoku.id</b>
+  </a>
+</div>
+
+<div class="follow-line">
+  <i class="fas fa-map-marker-alt maps"></i>
+  Beri rating 5⭐ & review Maps →
+  <a href="https://maps.app.goo.gl/GbxopdCVEVVEkBaQ6" target="_blank">
+    <b>Suryatokoku</b>
+  </a>
+</div>
+
+<div class="follow-note">
+  📸 <b>Screenshot</b> dan tunjukkan juga <b>bukti follow</b> akun official kami
+  kepada <b>Staff kami</b>.
+</div>
+
+  <div id="qrcode" class="qr"></div>
+
+ <div class="note">
+  Ikuti info terbaru kami di Instagram
+  <a href="https://www.instagram.com/suryatokoku.id/" target="_blank">
+    <b>@suryatokoku.id</b>
+  </a>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const nama = params.get("nama") || "";
+const wa = params.get("wa") || "";
+
+// FORMAT QR: Nama<TAB>WhatsApp
+const qrText = nama + "\t" + wa;
+
+// Generate QR Code
+new QRCode(document.getElementById("qrcode"), {
+  text: qrText,
+  width: 180,
+  height: 180
+});
+</script>
+
+</body>
+</html>
